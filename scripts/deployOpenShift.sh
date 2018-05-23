@@ -176,24 +176,24 @@ openshift_master_identity_providers=[{'name': 'htpasswd_auth', 'login': 'true', 
 openshift_enable_service_catalog=true
 
 # Disable the OpenShift SDN plugin
-# openshift_use_openshift_sdn=true
+openshift_use_openshift_sdn=true
 
 # enable ntp on masters to ensure proper failover
 openshift_clock_enabled=true
 
 # Setup metrics
 openshift_metrics_install_metrics=false
-#openshift_metrics_cassandra_storage_type=dynamic
+openshift_metrics_cassandra_storage_type=dynamic
 openshift_metrics_start_cluster=true
 openshift_metrics_startup_timeout=120
 openshift_metrics_hawkular_nodeselector={"region":"infra"}
 openshift_metrics_cassandra_nodeselector={"region":"infra"}
 openshift_metrics_heapster_nodeselector={"region":"infra"}
-# openshift_metrics_hawkular_hostname=https://hawkular-metrics.$ROUTING/hawkular/metrics
+openshift_metrics_hawkular_hostname=https://hawkular-metrics.$ROUTING/hawkular/metrics
 
 # Setup logging
 openshift_logging_install_logging=false
-# openshift_logging_es_pvc_dynamic=true
+openshift_logging_es_pvc_dynamic=true
 openshift_logging_es_pvc_storage_class_name=generic
 openshift_logging_fluentd_nodeselector={"logging":"true"}
 openshift_logging_es_nodeselector={"region":"infra"}
